@@ -34,10 +34,10 @@ Katrin Grimm
 data(Election2005)
 outlc <- outliertuk(Election2005)
 
-# sort and plot with function "visid" from package "extracat"
-\dontrun{
-library(extracat)
-visid(outlc,sort="b")
-}
+%# sort and plot with function "visid" from package "extracat"
+%\dontrun{
+%library(extracat)
+%visid(outlc,sort="b")
+%}
 }
 \keyword{outliers}

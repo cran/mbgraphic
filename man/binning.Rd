@@ -33,6 +33,7 @@ Katrin Grimm
  \code{\link{binningplot}}
 }
 \examples{
+\dontrun{
 df <- data.frame(
   x = rnorm(1000),
   y = rnorm(1000),
@@ -40,4 +41,5 @@ df <- data.frame(
 
 # A common binning for all variables of df with 5 bins in each dimension:
 binning(df,b=5)
+}
 }

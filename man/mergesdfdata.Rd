@@ -33,6 +33,7 @@ Katrin Grimm
 }
 
 \examples{
+\dontrun{
 data(Election2005)
 set.seed(345456)
 election05_small <- Election2005[,sample(5:70,5)]
@@ -41,5 +42,6 @@ addscag <- scag2sdf(election05_small,
     scagfun.list=list(dcor2d=dcor2d,splines2d=splines2d))
 # merge addscag and scagsdf
 scagdf2 <- mergesdfdata(scagdf,addscag)
+}
 }
 \keyword{two-dimensional meausures and selections}

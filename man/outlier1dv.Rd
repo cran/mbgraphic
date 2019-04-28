@@ -30,6 +30,7 @@ Katrin Grimm
 }
 \examples{
 data(Election2005)
+\dontrun{
 outlm <- outlier1dv(Election2005)
 
 # order data frame based on absolute row and column sums
@@ -43,7 +44,7 @@ outlm3 <- outlm2[1:50,1:68]
 outlm4 <- outlm3[,order(apply(outlm3,2,abssum),decreasing=TRUE)]
 
 # plot in heatmap
-\dontrun{
+
 library(gplots)
 heatmap.2(as.matrix(outlm4), col=colorpanel(20, "red", "white","blue"),
           breaks=seq(-1,1,2/20),dendrogram="none",

@@ -47,7 +47,7 @@ H. Wickham (2009) \emph{ggplot2: Elegant Graphics for Data Analysis} New York: S
 }
 \examples{
 data(Election2005)
-
+\dontrun{
 # Define new variable which explains affiliation of the constituencies
 # to east Germany, west Germany and Berlin 
 OstWest <-  ifelse(Election2005$Land \%in\% 
@@ -58,5 +58,6 @@ Election2005$OstWestBerlin <-
 
 # Plot 5 variables with highest values in groups 
 groups_maxplot(Election2005,"OstWestBerlin")
+}
 }
 \keyword{two-dimensional meausures and selections}

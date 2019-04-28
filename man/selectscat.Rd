@@ -65,7 +65,7 @@ data(Election2005)
 selectscat(Election2005)
 # 7 variables and a higher chance of finding optimal matrix 
 selectscat(Election2005,k=7,r=15)
-}
+
 
 # Use correlation as the measure of relevance 
 selectscat(Election2005,criteria="cor")
@@ -74,7 +74,6 @@ selectscat(Election2005,criteria="cor")
 election_num <- Election2005[,sapply(Election2005,is.numeric)] 
 selectscat(election_num,relmat=cor(election_num),plot=FALSE)
 
-\dontrun{
 # If a list of class "sdfdata" is already calculated
 sdfdf <- sdf(Election2005)
 # Use only measure "Outlying"

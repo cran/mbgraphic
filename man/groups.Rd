@@ -36,7 +36,7 @@ Katrin Grimm
 }
 \examples{
 data(Election2005)
-
+\dontrun{
 # Define new variable which explains affiliation of the constituencies
 # to east Germany, west Germany and Berlin 
 OstWest <-  ifelse(Election2005$Land \%in\% 
@@ -49,5 +49,6 @@ Election2005$OstWestBerlin <-
 groupm <- groups(Election2005, "OstWestBerlin")
 # Show highest values 
 groupm[with(groupm,order(groups,decreasing=TRUE))[1:10],]
+}
 }
 \keyword{two-dimensional meausures and selections}

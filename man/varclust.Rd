@@ -39,7 +39,7 @@ Katrin Grimm
 
 \examples{
 data(Election2005)
-
+\dontrun{
 # Variable clustering based on minimum correlation
 vc1 <- varclust(Election2005,mincor=0.8)
 vc1$c # The number of clusters is 45
@@ -47,5 +47,6 @@ vc1$c # The number of clusters is 45
 # Variable clustering based on the number of clusters
 vc2 <- varclust(Election2005,30)
 vc2$mincor # The minimum correlation is 0.63
+}
 }
 \keyword{two-dimensional meausures and selections}

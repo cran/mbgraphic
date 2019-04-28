@@ -48,7 +48,8 @@ Katrin Grimm
 
 
 \seealso{
-\code{\link[extracat]{wdcor}} in package \pkg{extracat}, \code{\link{splines2d}}
+%\code{\link[extracat]{wdcor}} in package \pkg{extracat}, 
+\code{\link{splines2d}}
 }
 \examples{
 data(Election2005)

@@ -1,5 +1,3 @@
-# Clustering of numerical variables based on average linkage
-# returns: the clusters and the cluster representatives
 varclust <- function(data,c=NULL,mincor=NULL) {
   x <- data[,sapply(data,is.numeric)]
   p <- ncol(x)

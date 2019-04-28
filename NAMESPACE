@@ -25,7 +25,7 @@ splines2d,
 varclust
 )
 useDynLib(mbgraphic)
-importFrom(extracat,wdcor)
+importFrom(energy,dcor)
 importFrom(parallel,mcmapply)
 importFrom(grid,grid.newpage,grid.draw,unit.c)
 importFrom(gridExtra,grid.arrange,arrangeGrob)

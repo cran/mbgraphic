@@ -1,9 +1,12 @@
 ### distance correlation 
 dcor2d_xy <- function(x,y,bx=NULL,by=NULL,binning=FALSE,b=50,anchor="min",parallel=FALSE){
   if(binning %in% c(TRUE,"equi","quant")){
-    bin2d <- data.frame(x=x,y=y) %>% mutate(bx,by)
-    xyw <- bin2d  %>%   group_by(bx,by) %>% summarize(mx=mean(x),my=mean(y),we=length(x))
-    measure <- with(xyw, wdcor(mx, my, we)) 
+     bin2d <- data.frame(x=x,y=y) %>% mutate(bx,by)
+     xyw <- bin2d  %>%   group_by(bx,by) %>% summarize(mx=mean(x),my=mean(y),we=length(x))
+    # measure <- with(xyw, wdcor(mx, my, we)) 
+    warning("Calcualation of weighted distance corelation is currently not available. All bins have weight 1.")
+     xyw <- na.omit(xyw)
+     measure <- with(xyw, dcor(mx, my)) 
   }
   if(binning=="hexb"){
     bin <- hexbin(x,y,xbins=b)
@@ -11,10 +14,14 @@ dcor2d_xy <- function(x,y,bx=NULL,by=NULL,binning=FALSE,b=50,anchor="min",parall
     my <- bin@ycm
     we <- bin@count
     xyw <- data.frame(mx=mx,my=my,we=we)
-    measure <- with(xyw, wdcor(mx, my, we)) 
+    # measure <- with(xyw, wdcor(mx, my, we)) 
+    warning("Calcualation of weighted distance corelation is currently not available. All bins have weight 1.")
+    xyw <- na.omit(xyw)
+    measure <- with(xyw, dcor(mx, my)) 
   }
   if(binning==FALSE){
-    measure <- wdcor(x,y)
+    xy <-  na.omit(data.frame(x = x, y = y))
+    measure <- with(xy, dcor(x,y))
   }
   return(measure)
 }

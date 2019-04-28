@@ -46,7 +46,7 @@ Katrin Grimm
 }
 \examples{
 data(Election2005)
-
+\dontrun{
 multimod <- multimod1d(Election2005)
 maxv <- order(multimod,decreasing=TRUE)[1:4]
 par(mfrow=c(2,2))
@@ -54,7 +54,7 @@ for(i in 1:4){
   hist(Election2005[,maxv[i]],xlab="",breaks=30,
   main=paste(names(Election2005[maxv[i]])))
 }
-\dontrun{
+
 # Explore skewness, multimodality and discreteness within interactive environment.
 iaunivariate(Election2005)
 }

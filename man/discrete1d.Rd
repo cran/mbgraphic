@@ -30,6 +30,7 @@ Katrin Grimm
 \examples{
 data(Election2005)
 
+\dontrun{
 discrete <- discrete1d(Election2005)
 maxv <- order(discrete,decreasing=TRUE)[1:4]
 par(mfrow=c(2,2))
@@ -38,7 +39,6 @@ for(i in 1:4){
   main=paste(names(Election2005[maxv[i]])))
 }
 
-\dontrun{
 # Explore skewness, multimodality and discreteness 
 # within an interactive environment.
 iaunivariate(Election2005)

@@ -44,6 +44,7 @@ Katrin Grimm
 }
 \examples{
 data(Election2005)
+\dontrun{
 set.seed(345456)
 election05_small <- Election2005[,sample(5:70,10)]
 
@@ -61,5 +62,6 @@ scagdf <- scag2sdf(election05_small,
       list(cor=cor,dcor2d=dcor2d, splines2d=splines2d),
     arguments.list = 
       list(list(method="spearman"),NULL,NULL))
+}
 }
 \keyword{two-dimensional meausures and selections}

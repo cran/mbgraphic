@@ -51,6 +51,7 @@ The nine measures are: \code{"Outlying",  "Skewed",    "Clumpy",    "Sparse",   
 }
 \examples{
 data(Election2005)
+\dontrun{
 set.seed(345456)
 election05_small <- Election2005[,sample(5:70,10)]
 
@@ -61,5 +62,6 @@ head(scagdf$sdf)
 scagdf_sel <- sdf(election05_small,selection=c("Outlying", "Clumpy","1-Convex"))
 # the same as 
 scagdf_sel <- sdf(election05_small,selection=c(1,3,6))
+}
 }
 \keyword{two-dimensional meausures and selections}

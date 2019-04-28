@@ -38,6 +38,7 @@ Katrin Grimm
 \code{\link{binning}}
 }
 \examples{
+\dontrun{
 x <- rnorm(10000)
 y <- rnorm(10000)
 
@@ -46,4 +47,5 @@ binningplot(x,y,b=20)
 
 # quantile based binning with 20 bins in each variable
 binningplot(x,y,b=20,bin="quant")
+}
 }
